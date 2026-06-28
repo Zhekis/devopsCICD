@@ -19,7 +19,8 @@ class TestMe:
 
 
 if __name__ == '__main__':
-    request_handler = http.server.SimpleHTTPRequestHandler
-    with socketserver.TCPServer(("", PORT), request_handler) as server:
+    Handler = http.server.SimpleHTTPRequestHandler
+
+    with socketserver.TCPServer(("", PORT), Handler) as server:
         print("serving at port", PORT)
         server.serve_forever()
