@@ -21,7 +21,7 @@ spec:
       containers:
         - name: devops-server
           image: zhekis/devops:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 8000
 ---
